@@ -16,11 +16,9 @@ mongoose.connect(process.env.MONGO_URL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true
-}).then(() => {
-	console.log('Database connected')
-}).catch(err => {
-	console.log(err)
-});
+})
+	.then(() => console.log('Database connected'))
+	.catch(err => console.log(err));
 
 
 app.listen(PORT, () => console.log(`Backend server running on port ${PORT}`));
